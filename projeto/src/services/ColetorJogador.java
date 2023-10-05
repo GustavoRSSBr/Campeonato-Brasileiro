@@ -8,7 +8,7 @@ import model.Jogador;
 public class ColetorJogador implements Leitor<Jogador>{
 
 	@Override
-	public List<Jogador> ler(String filePath) throws IOException {
+	public List<Jogador> ler() throws IOException {
 		// TODO Auto-generated method stub
 		return null;
 	}

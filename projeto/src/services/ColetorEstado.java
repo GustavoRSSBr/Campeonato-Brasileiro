@@ -8,7 +8,7 @@ import model.Estado;
 public class ColetorEstado implements Leitor<Estado>{
 
 	@Override
-	public List<Estado> ler(String filePath) throws IOException {
+	public List<Estado> ler() throws IOException {
 		// TODO Auto-generated method stub
 		return null;
 	}

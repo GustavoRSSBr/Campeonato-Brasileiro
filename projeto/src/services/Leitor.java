@@ -5,6 +5,6 @@ import java.util.List;
 
 public interface Leitor <T> {
 	
-	public List<T> ler(String filePath) throws IOException;
+	public List<T> ler() throws IOException;
 
 }
