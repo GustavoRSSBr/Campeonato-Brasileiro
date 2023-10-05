@@ -1,5 +1,6 @@
 package controller;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -24,8 +25,13 @@ public class Controle {
 	ColetorPartidas coletorPartidas = new ColetorPartidas();
 	ColetorTime coletorTime = new ColetorTime();
 
-	public Controle() {
+	public Controle() throws IOException {
 		this.estados = this.coletorEstado.ler();
+		this.jogadores = this.coletorJogador.ler();
+		this.partidas = this.coletorPartidas.ler();
+		this.times = this.coletorTime.ler();
 	}
+
+
 
 }
