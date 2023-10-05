@@ -1,36 +1,36 @@
 package model;
 
-import java.util.Date;
-import java.util.HashMap;
-import java.util.Map;
+import java.time.LocalDate;
 
 public class Estado {
-	private String nome;
-	private Map<Date, Integer> qtdJogoAno = new HashMap<Date, Integer>();
+	private String nomeDoEstado;
+	private LocalDate dataDoJogo;
 
-	public Estado(String nome, Map<Date, Integer> qtdJogoAno) {
-		this.nome = nome;
-		this.qtdJogoAno = qtdJogoAno;
+	public Estado(String nome, LocalDate dataDoJogo) {
+		this.nomeDoEstado = nome;
+		this.dataDoJogo= dataDoJogo;
 	}
 
 	public Estado() {
 
 	}
 
-	public String getNome() {
-		return nome;
+	public String getNomeDoEstado() {
+		return nomeDoEstado;
 	}
 
-	public void setNome(String nome) {
-		this.nome = nome;
+	public void setNomeDoEstado(String nomeDoEstado) {
+		this.nomeDoEstado = nomeDoEstado;
 	}
 
-	public Map<Date, Integer> getQtdJogoAno() {
-		return qtdJogoAno;
+	public LocalDate getDataDoJogo() {
+		return dataDoJogo;
 	}
 
-	public void setQtdJogoAno(Map<Date, Integer> qtdJogoAno) {
-		this.qtdJogoAno = qtdJogoAno;
+	public void setDataDoJogo(LocalDate dataDoJogo) {
+		this.dataDoJogo = dataDoJogo;
 	}
+
+	
 
 }

@@ -24,8 +24,8 @@ public class Controle {
 	ColetorPartidas coletorPartidas = new ColetorPartidas();
 	ColetorTime coletorTime = new ColetorTime();
 
-	public Controle() {
-		this.estados = this.coletorEstado.ler();
-	}
+	//public Controle() {
+	//	this.estados = this.coletorEstado.ler();
+	//}
 
 }
