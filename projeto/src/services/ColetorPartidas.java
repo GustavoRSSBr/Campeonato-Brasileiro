@@ -8,7 +8,7 @@ import model.Partida;
 public class ColetorPartidas implements Leitor<Partida> {
 
 	@Override
-	public List<Partida> ler(String filePath) throws IOException {
+	public List<Partida> ler() throws IOException {
 		// TODO Auto-generated method stub
 		return null;
 	}
