@@ -3,10 +3,12 @@ package services;
 import java.io.IOException;
 import java.util.List;
 
-public class ColetorPartidas implements Leitor {
+import model.Partida;
+
+public class ColetorPartidas implements Leitor<Partida> {
 
 	@Override
-	public List<String[]> ler(String filePath) throws IOException {
+	public List<Partida> ler(String filePath) throws IOException {
 		// TODO Auto-generated method stub
 		return null;
 	}

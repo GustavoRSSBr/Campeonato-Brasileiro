@@ -3,10 +3,12 @@ package services;
 import java.io.IOException;
 import java.util.List;
 
-public class ColetorTime implements Leitor {
+import model.Time;
+
+public class ColetorTime implements Leitor<Time> {
 
 	@Override
-	public List<String[]> ler(String filePath) throws IOException {
+	public List<Time> ler(String filePath) throws IOException {
 		// TODO Auto-generated method stub
 		return null;
 	}

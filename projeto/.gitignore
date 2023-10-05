@@ -11,3 +11,9 @@ local.properties
 .classpath
 .settings/
 .loadpath
+
+# Arquivos do IntelliJ
+*.iml
+*.ipr
+*.iws
+.idea/

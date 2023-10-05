@@ -3,10 +3,12 @@ package services;
 import java.io.IOException;
 import java.util.List;
 
-public class ColetorJogador implements Leitor{
+import model.Jogador;
+
+public class ColetorJogador implements Leitor<Jogador>{
 
 	@Override
-	public List<String[]> ler(String filePath) throws IOException {
+	public List<Jogador> ler(String filePath) throws IOException {
 		// TODO Auto-generated method stub
 		return null;
 	}
