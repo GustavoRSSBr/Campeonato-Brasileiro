@@ -1,7 +1,9 @@
 package controller;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 import model.Estado;
 import model.Jogador;
@@ -14,18 +16,25 @@ import services.ColetorTime;
 
 public class Controle {
 	
-	List<Estado> estados = new ArrayList<>();
-	List<Jogador> jogadores = new ArrayList<>();
-	List<Partida> partidas = new ArrayList<>();
-	List<Time> times = new ArrayList<>();
+	private List<Estado> estados = new ArrayList<>();
+	private List<Jogador> jogadores = new ArrayList<>();
+	private List<Partida> partidas = new ArrayList<>();
+	private List<Time> times = new ArrayList<>();
 
-	ColetorEstado coletorEstado = new ColetorEstado();
-	ColetorJogador coletorJogador = new ColetorJogador();
-	ColetorPartidas coletorPartidas = new ColetorPartidas();
-	ColetorTime coletorTime = new ColetorTime();
+	public Controle() throws IOException {
+		ColetorEstado coletorEstado = new ColetorEstado();
+		this.estados = coletorEstado.ler();
+		ColetorJogador coletorJogador = new ColetorJogador();
+		this.jogadores = coletorJogador.ler();
+		ColetorPartidas coletorPartidas = new ColetorPartidas();
+		this.partidas = coletorPartidas.ler();
+		ColetorTime coletorTime = new ColetorTime();
+		this.times = coletorTime.ler();
+	}
 
-	//public Controle() {
-	//	this.estados = this.coletorEstado.ler();
-	//}
+	private int vitoriasEm2008(Time time) {
+		return time.getQtdVitoriasAno()
+	}
+
 
 }
