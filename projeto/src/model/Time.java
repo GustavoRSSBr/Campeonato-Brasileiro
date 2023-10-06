@@ -1,16 +1,14 @@
 package model;
 
-import java.util.Date;
-import java.util.HashMap;
-import java.util.Map;
+import java.time.LocalDate;
 
 public class Time {
 	private String nomeTime;
-	private Map<Date, Integer> qtdVitoriasAno = new HashMap<Date, Integer>();
+	private LocalDate dataDaVitoria;
 
-	public Time(String nomeTime, Map<Date, Integer> qtdVitoriasAno) {
+	public Time(String nomeTime, LocalDate dataDaVitoria) {
 		this.nomeTime = nomeTime;
-		this.qtdVitoriasAno = qtdVitoriasAno;
+		this.dataDaVitoria = dataDaVitoria;
 	}
 
 	public Time() {
@@ -24,12 +22,13 @@ public class Time {
 		this.nomeTime = nomeTime;
 	}
 
-	public Map<Date, Integer> getQtdVitoriasAno() {
-		return qtdVitoriasAno;
+	public LocalDate getDataDaVitoria() {
+		return dataDaVitoria;
 	}
 
-	public void setQtdVitoriasAno(Map<Date, Integer> qtdVitoriasAno) {
-		this.qtdVitoriasAno = qtdVitoriasAno;
+	public void setDataDaVitoria(LocalDate dataDaVitoria) {
+		this.dataDaVitoria = dataDaVitoria;
 	}
 
+	
 }

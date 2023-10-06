@@ -36,8 +36,5 @@ public class Controle {
 		return time.getQtdVitoriasAno()
 	}
 
-	public String timeQMaisVenceuEm2008() {
-		Map<String, Integer> maiorVitoriaPorTime = this.times.stream().flatMap();
-	}
 
 }
