@@ -8,7 +8,7 @@ public class Estado {
 
 	public Estado(String nome, LocalDate dataDoJogo) {
 		this.nomeDoEstado = nome;
-		this.dataDoJogo= dataDoJogo;
+		this.dataDoJogo = dataDoJogo;
 	}
 
 	public Estado() {
@@ -30,7 +30,5 @@ public class Estado {
 	public void setDataDoJogo(LocalDate dataDoJogo) {
 		this.dataDoJogo = dataDoJogo;
 	}
-
-	
 
 }
