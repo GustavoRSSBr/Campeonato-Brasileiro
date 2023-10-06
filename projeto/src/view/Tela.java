@@ -2,12 +2,14 @@ package view;
 
 import java.io.IOException;
 
-import services.ColetorEstado;
+import model.Time;
+import services.ColetorTime;
+import services.Leitor;
 
 public class Tela {
 
 	public static void main(String[] args) {
-		ColetorEstado coletor = new ColetorEstado();
+		Leitor<Time> coletor = new ColetorTime();
 		
 		try {
 			coletor.ler();
