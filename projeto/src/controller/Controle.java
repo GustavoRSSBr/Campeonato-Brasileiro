@@ -4,6 +4,10 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
+import java.util.concurrent.atomic.AtomicReference;
+import java.util.function.Function;
+import java.util.stream.Collectors;
 
 import model.Estado;
 import model.Jogador;
@@ -32,9 +36,20 @@ public class Controle {
 		this.times = coletorTime.ler();
 	}
 
-	private int vitoriasEm2008(Time time) {
-		return time.getQtdVitoriasAno()
-	}
+	public String timeComVitoriasEm2008() {
+        AtomicReference<String> palavraRetornada = new AtomicReference<>();
+        List<Time> jogosDe2008 = this.times.stream().filter(time -> time.getDataDaVitoria().getYear() == 2008).toList();
+
+        Map<String, Long> frequencias =jogosDe2008.stream().map(Time::getNomeTime)
+                .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
+
+        Optional<Map.Entry<String, Long>> palavraMaisFrequente = frequencias.entrySet().stream()
+                .max(Map.Entry.comparingByValue());
+
+        palavraMaisFrequente.ifPresent(palavra -> palavraRetornada.set(palavra.getKey()));
+
+        return palavraRetornada.get();
+    }
 
 
 }

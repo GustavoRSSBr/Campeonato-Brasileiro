@@ -41,7 +41,7 @@ public class ColetorTime implements Leitor<Time> {
 				timesValidos.add(timeGanhador);
 
 				// Um Teste
-				System.out.println("Time: " + nomeDoGanhador + " | Data: " + dataDaPartida);
+				// System.out.println("Time: " + nomeDoGanhador + " | Data: " + dataDaPartida);
 			}
 		} catch (IOException e) {
 			e.printStackTrace();
