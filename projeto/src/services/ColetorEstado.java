@@ -36,7 +36,7 @@ public class ColetorEstado implements Leitor<Estado> {
 				estadosValidos.add(estadoJogo);
 
 				// Um Teste
-				// System.out.println("Estado: " + dadosEstado[15].replace("\"", "") + " Data: " + dataDaPartida);
+				System.out.println("Estado: " + dadosEstado[15].replace("\"", "") + " Data: " + dataDaPartida);
 			}
 		} catch (IOException e) {
 			e.printStackTrace();

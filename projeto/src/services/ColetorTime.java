@@ -29,14 +29,14 @@ public class ColetorTime implements Leitor<Time> {
 
 				String nomeDoGanhador = dadosDoTime[10].replace("\"", "");
 				String dataTexto = dadosDoTime[2].replace("\"", "");
-				
-				if(nomeDoGanhador.equals("-")) {
+
+				if (nomeDoGanhador.equals("-")) {
 					continue;
 				}
 
 				LocalDate dataDaPartida = LocalDate.parse(dataTexto, formato);
 
-				Time timeGanhador = new Time(nomeDoGanhador , dataDaPartida);
+				Time timeGanhador = new Time(nomeDoGanhador, dataDaPartida);
 
 				timesValidos.add(timeGanhador);
 
