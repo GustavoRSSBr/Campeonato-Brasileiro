@@ -42,7 +42,7 @@ public class ColetorJogador implements Leitor<Jogador> {
 				calcularGol(jogador, tipoDoGol);
 
 				// Um Teste
-				//System.out.println();
+				// System.out.println();
 			}
 
 			while ((linha = br2.readLine()) != null) {
