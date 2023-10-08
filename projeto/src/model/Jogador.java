@@ -3,11 +3,11 @@ package model;
 public class Jogador {
 
 	private String nome;
-	private Integer qtdCartaoAmarelo;
-	private Integer qtdCartaoVermelho;
-	private Integer totalDeGols;
-	private Integer qtdGolsContra;
-	private Integer qtdGolsPenalti;
+	private Integer qtdCartaoAmarelo = 0;
+	private Integer qtdCartaoVermelho = 0;
+	private Integer totalDeGols = 0;
+	private Integer qtdGolsContra = 0;
+	private Integer qtdGolsPenalti = 0;
 
 	public Jogador(String nome, Integer qtdCartaoAmarelo, Integer qtdCartaoVermelho, Integer totalDeGols,
 			Integer qtdGolsContra, Integer qtdGolsPenalti) {
@@ -17,6 +17,10 @@ public class Jogador {
 		this.totalDeGols = totalDeGols;
 		this.qtdGolsContra = qtdGolsContra;
 		this.qtdGolsPenalti = qtdGolsPenalti;
+	}
+
+	public Jogador(String nome) {
+		this.nome = nome;
 	}
 
 	public Jogador() {
@@ -34,39 +38,48 @@ public class Jogador {
 		return qtdCartaoAmarelo;
 	}
 
-	public void setQtdCartaoAmarelo(Integer qtdCartaoAmarelo) {
-		this.qtdCartaoAmarelo = qtdCartaoAmarelo;
+	public void somarCartaoAmarelo() {
+		this.qtdCartaoAmarelo++;
 	}
 
 	public Integer getQtdCartaoVermelho() {
 		return qtdCartaoVermelho;
 	}
 
-	public void setQtdCartaoVermelho(Integer qtdCartaoVermelho) {
-		this.qtdCartaoVermelho = qtdCartaoVermelho;
+	public void somarCartaoVermelho() {
+		this.qtdCartaoVermelho++;
 	}
 
 	public Integer getTotalDeGols() {
 		return totalDeGols;
 	}
 
-	public void setTotalDeGols(Integer totalDeGols) {
-		this.totalDeGols = totalDeGols;
+	public void somarTotalDeGols() {
+		this.totalDeGols++;
 	}
 
 	public Integer getQtdGolsContra() {
 		return qtdGolsContra;
 	}
 
-	public void setQtdGolsContra(Integer qtdGolsContra) {
-		this.qtdGolsContra = qtdGolsContra;
+	public void somarGolsContra() {
+		somarTotalDeGols();
+		this.qtdGolsContra++;
 	}
 
 	public Integer getQtdGolsPenalti() {
 		return qtdGolsPenalti;
 	}
 
-	public void setQtdGolsPenalti(Integer qtdGolsPenalti) {
-		this.qtdGolsPenalti = qtdGolsPenalti;
+	public void somarGolsPenalti() {
+		somarTotalDeGols();
+		this.qtdGolsPenalti++;
+	}
+
+	@Override
+	public String toString() {
+		return "Jogador [nome=" + nome + ", qtdCartaoAmarelo=" + qtdCartaoAmarelo + ", qtdCartaoVermelho="
+				+ qtdCartaoVermelho + ", totalDeGols=" + totalDeGols + ", qtdGolsContra=" + qtdGolsContra
+				+ ", qtdGolsPenalti=" + qtdGolsPenalti + "]";
 	}
 }
