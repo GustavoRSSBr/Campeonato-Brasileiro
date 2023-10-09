@@ -5,7 +5,7 @@ public class Jogador {
 	private String nome;
 	private Integer qtdCartaoAmarelo = 0;
 	private Integer qtdCartaoVermelho = 0;
-	private Integer totalDeGols = 0;
+	private int totalDeGols = 0;
 	private Integer qtdGolsContra = 0;
 	private Integer qtdGolsPenalti = 0;
 

@@ -34,8 +34,8 @@ public class ColetorPartidas implements Leitor<Partida> {
 				partidasValidas.add(partida);
 
 				// Um Teste
-				System.out.println(
-						"Partida: " + idDaPartida + " | quantidade de Gols: " + qtdDeGols + " | Placar " + placar);
+				// System.out.println(
+				// 		"Partida: " + idDaPartida + " | quantidade de Gols: " + qtdDeGols + " | Placar " + placar);
 			}
 		} catch (IOException e) {
 			e.printStackTrace();
