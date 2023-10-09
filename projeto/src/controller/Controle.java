@@ -40,7 +40,7 @@ public class Controle {
         AtomicReference<String> timeRetornado = new AtomicReference<>();
         List<Time> jogosDe2008 = this.times.stream().filter(time -> time.getDataDaVitoria().getYear() == 2008).toList();
 
-        Map<String, Long> frequencias =jogosDe2008.stream().map(Time::getNomeTime)
+        Map<String, Long> frequencias = jogosDe2008.stream().map(Time::getNomeTime)
                 .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
 
         Optional<Map.Entry<String, Long>> palavraMaisFrequente = frequencias.entrySet().stream()
@@ -63,6 +63,12 @@ public class Controle {
 		estadoMenosFrequente.ifPresent(palavra -> estado.set(palavra.getKey()));
 
 		return estado.get();
+	}
+
+	public String jogadorComMaisGols() {
+		Optional<Jogador> jogador = this.jogadores.stream().max((a, b) -> Integer.compare(a.getTotalDeGols(), b.getTotalDeGols()));
+
+		return jogador.get().getNome();
 	}
 
 }
