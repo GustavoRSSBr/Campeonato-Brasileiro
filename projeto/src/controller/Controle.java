@@ -80,8 +80,14 @@ public class Controle {
 		return jogador.get().getNome();
 	}
 
-	public  String jogadorComMaisCartoesAmarelos() {
+	public String jogadorComMaisCartoesAmarelos() {
 		Optional<Jogador> jogador = this.jogadores.stream().max(Comparator.comparingInt(Jogador::getQtdCartaoAmarelo));
+
+		return jogador.get().getNome();
+	}
+
+	public String jogadorComMaisCartoesVermelhos() {
+		Optional<Jogador> jogador = this.jogadores.stream().max(Comparator.comparingInt(Jogador::getQtdCartaoVermelho));
 
 		return jogador.get().getNome();
 	}
