@@ -14,7 +14,7 @@ public class Tela {
 		try {
 			Controle controle = new Controle();
 
-			System.out.println(controle.jogadorComMaisGolsContra());
+			System.out.println(controle.jogadorComMaisCartoesAmarelos());
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
