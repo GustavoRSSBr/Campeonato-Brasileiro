@@ -3,9 +3,6 @@ package view;
 import java.io.IOException;
 
 import controller.Controle;
-import model.Jogador;
-import services.ColetorJogador;
-import services.Leitor;
 
 public class Tela {
 

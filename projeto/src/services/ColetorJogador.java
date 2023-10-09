@@ -63,7 +63,7 @@ public class ColetorJogador implements Leitor<Jogador> {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		System.out.println(jogadores);
+		//System.out.println(jogadores);
 		return jogadores;
 	}
 
