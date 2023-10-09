@@ -17,7 +17,7 @@ public class ColetorPartidas implements Leitor<Partida> {
 	String separador = ",";
 
 	@Override
-	public List<Partida> ler() throws IOException {
+	public List<Partida> ler() {
 
 		try (BufferedReader br = new BufferedReader(new FileReader(csvArquivo))) {
 			br.readLine();

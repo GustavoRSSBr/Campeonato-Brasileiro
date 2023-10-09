@@ -71,4 +71,10 @@ public class Controle {
 		return jogador.get().getNome();
 	}
 
+	public String jogadorComMaisGolsDePenalti() {
+		Optional<Jogador> jogador = this.jogadores.stream().max((a, b) -> Integer.compare(a.getQtdGolsPenalti(), b.getQtdGolsPenalti()));
+
+		return jogador.get().getNome();
+	}
+
 }
