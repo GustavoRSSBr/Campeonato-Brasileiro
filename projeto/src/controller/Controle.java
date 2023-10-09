@@ -1,10 +1,7 @@
 package controller;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-import java.util.Optional;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.function.Function;
 import java.util.stream.Collectors;
@@ -73,6 +70,12 @@ public class Controle {
 
 	public String jogadorComMaisGolsDePenalti() {
 		Optional<Jogador> jogador = this.jogadores.stream().max((a, b) -> Integer.compare(a.getQtdGolsPenalti(), b.getQtdGolsPenalti()));
+
+		return jogador.get().getNome();
+	}
+
+	public String jogadorComMaisGolsContra() {
+		Optional<Jogador> jogador = this.jogadores.stream().max(Comparator.comparingInt(Jogador::getQtdGolsContra));
 
 		return jogador.get().getNome();
 	}
