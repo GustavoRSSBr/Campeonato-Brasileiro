@@ -20,7 +20,7 @@ public class ColetorTime implements Leitor<Time> {
 	DateTimeFormatter formato = DateTimeFormatter.ofPattern("d/M/yyyy");
 
 	@Override
-	public List<Time> ler() throws IOException {
+	public List<Time> ler() {
 
 		try (BufferedReader br = new BufferedReader(new FileReader(csvArquivo))) {
 			br.readLine();

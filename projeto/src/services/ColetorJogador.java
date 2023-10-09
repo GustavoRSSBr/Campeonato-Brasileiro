@@ -19,7 +19,7 @@ public class ColetorJogador implements Leitor<Jogador> {
 	String separador = ",";
 
 	@Override
-	public List<Jogador> ler() throws IOException {
+	public List<Jogador> ler() {
 		try (BufferedReader br1 = new BufferedReader(new FileReader(csvArquivoGol));
 				BufferedReader br2 = new BufferedReader(new FileReader(csvArquivoCartao))) {
 			br1.readLine();
