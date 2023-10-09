@@ -92,4 +92,10 @@ public class Controle {
 		return jogador.get().getNome();
 	}
 
+	public String partidaComMaisGols() {
+		Optional<Partida> partida = this.partidas.stream().max(Comparator.comparingInt(Partida::getQtdGols));
+
+		return partida.get().getPlacar();
+	}
+
 }
